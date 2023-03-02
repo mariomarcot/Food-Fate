@@ -4,17 +4,20 @@ class RecipeTableViewController: UITableViewController {
     
     @IBOutlet weak var recipeTableView: UITableView!
     
-    var type: RecipeType?
-    var recipeManager = RecipeManager()
+    var type: String?
+    var recipeTableViewCell = RecipeTableViewCell()
     var recipes: [Recipe] = [] {
         didSet {
-            recipeTableView.reloadData()
+            DispatchQueue.main.async {
+                self.recipeTableView.reloadData()
+            }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.register(UINib(nibName: "RecipeTableViewCell", bundle: nil), forCellReuseIdentifier: RecipeTableViewCell.identifier)
+
         if let type {
             let service = RecipeService()
             service.loadRecipe(type: type) { result in
@@ -33,8 +36,11 @@ class RecipeTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.menuCell, for: indexPath)
-        cell.textLabel?.text = recipes[indexPath.row].title
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: RecipeTableViewCell.identifier, for: indexPath) as? RecipeTableViewCell else { return
+            UITableViewCell()
+        }
+        let recipes = recipes[indexPath.row]
+        cell.update(recipes)
         return cell
     }
 }

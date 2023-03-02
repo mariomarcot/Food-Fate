@@ -11,8 +11,6 @@ class MenuCollectionViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var recipeManager = RecipeManager()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,8 +20,9 @@ class MenuCollectionViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "recipeView" {
-            if let viewController = segue.destination as? RecipeTableViewController {
-                viewController.type = .bread
+            if let viewController = segue.destination as? RecipeTableViewController, let row = collectionView.indexPathsForSelectedItems?.first{
+                
+                viewController.type = menus[row.row].title
                 
             }
         }
@@ -48,13 +47,6 @@ extension MenuCollectionViewController: UICollectionViewDataSource {
 extension MenuCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 182 , height: 182)
-    }
-}
-
-//MARK: - UICollectionViewDelegate
-extension MenuCollectionViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(menus[indexPath.row].title)
     }
 }
 

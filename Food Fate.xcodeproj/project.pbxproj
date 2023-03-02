@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9159BECB29AE7DE400E75FF0 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159BEC929AE7DE400E75FF0 /* RecipeTableViewCell.swift */; };
+		9159BECC29AE7DE400E75FF0 /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9159BECA29AE7DE400E75FF0 /* RecipeTableViewCell.xib */; };
 		AC4EF426297073DB0010E8A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4EF425297073DB0010E8A5 /* AppDelegate.swift */; };
 		AC4EF428297073DB0010E8A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4EF427297073DB0010E8A5 /* SceneDelegate.swift */; };
 		AC4EF42A297073DB0010E8A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4EF429297073DB0010E8A5 /* ViewController.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9159BEC929AE7DE400E75FF0 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		9159BECA29AE7DE400E75FF0 /* RecipeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeTableViewCell.xib; sourceTree = "<group>"; };
 		AC4EF422297073DB0010E8A5 /* Food Fate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Fate.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC4EF425297073DB0010E8A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC4EF427297073DB0010E8A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,8 +114,10 @@
 			children = (
 				AC4EF429297073DB0010E8A5 /* ViewController.swift */,
 				ACFE2EE92972010D00A242FA /* MenuCollectionViewController.swift */,
+				AC92060D2971971400C9060B /* MenuCollectionViewCell.swift */,
 				ACE78DFE2975DF9800FA667A /* DiscoverViewController.swift */,
 				AC92ED1C29730D85004B1920 /* RecipeTableViewController.swift */,
+				9159BEC929AE7DE400E75FF0 /* RecipeTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -120,7 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				AC4EF42B297073DB0010E8A5 /* Main.storyboard */,
-				AC92060D2971971400C9060B /* MenuCollectionViewCell.swift */,
+				9159BECA29AE7DE400E75FF0 /* RecipeTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -203,6 +209,7 @@
 				AC674F9829746288003C0A4B /* Main.storyboard in Resources */,
 				AC4EF43A2970758B0010E8A5 /* PLAYSIR Regular.otf in Resources */,
 				AC4EF42F297073DC0010E8A5 /* Assets.xcassets in Resources */,
+				9159BECC29AE7DE400E75FF0 /* RecipeTableViewCell.xib in Resources */,
 				AC674F9A29746812003C0A4B /* citibank.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +224,7 @@
 				AC674F9529745EC7003C0A4B /* LaunchScreenViewController.swift in Sources */,
 				AC4EF42A297073DB0010E8A5 /* ViewController.swift in Sources */,
 				ACAB7BE529719C6100DDD060 /* Menu.swift in Sources */,
+				9159BECB29AE7DE400E75FF0 /* RecipeTableViewCell.swift in Sources */,
 				AC5F7FC62979A05300D63D8B /* RecipeData.swift in Sources */,
 				AC92060E2971971400C9060B /* MenuCollectionViewCell.swift in Sources */,
 				ACA923E02970793400E2E3F5 /* UIImage+GIF.swift in Sources */,
@@ -381,6 +389,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -409,6 +418,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -36,34 +36,14 @@ enum RecipeServiceError: Error {
     }
 }
 
-enum RecipeType: String {
-        case mainCourse = "main-course"
-        case sideDish = "side-dish"
-        case dessert = "dessert"
-        case appetizer = "appetizer"
-        case salad = "salad"
-        case bread = "bread"
-        case breakfast = "breakfast"
-        case soup = "soup"
-        case beverage = "beverage"
-        case sauce = "sauce"
-        case marinade = "marinade"
-        case fingerfood = "fingerfood"
-        case snack = "snack"
-        case drink = "drink"
-}
-
-struct RecipeManager {
-    let type = ["main-course", "side-dish", "dessert", "appetizer", "salad", "bread", "breakfast", "soup", "beverage", "sauce", "marinade", "fingerfood", "snack", "drink"]
-}
 
 final class RecipeService {
     let urlString = "https://api.spoonacular.com/recipes/complexSearch"
     private lazy var session = URLSession(configuration: .default)
     
-    func loadRecipe(type: RecipeType, onComplete: @escaping (Result<[Recipe],RecipeServiceError>) -> Void) {
+    func loadRecipe(type: String, onComplete: @escaping (Result<[Recipe],RecipeServiceError>) -> Void) {
         var url = URLComponents(string: urlString)
-        let queryItems: [URLQueryItem] = [URLQueryItem(name: "apiKey", value: "3f9dd299b9f1451a8ca4a2d8d2a4fb40"), URLQueryItem(name: "type", value: type.rawValue)]
+        let queryItems: [URLQueryItem] = [URLQueryItem(name: "apiKey", value: "3f9dd299b9f1451a8ca4a2d8d2a4fb40"), URLQueryItem(name: "type", value: type)]
         url?.queryItems = queryItems
         guard let url = url?.url else {
             return onComplete(.failure(.badURL))
