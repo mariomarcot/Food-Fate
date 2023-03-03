@@ -18,6 +18,7 @@
 		AC674F9529745EC7003C0A4B /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC674F9429745EC7003C0A4B /* LaunchScreenViewController.swift */; };
 		AC674F9829746288003C0A4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4EF42B297073DB0010E8A5 /* Main.storyboard */; };
 		AC674F9A29746812003C0A4B /* citibank.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC674F9929746812003C0A4B /* citibank.gif */; };
+		AC91D45A29B250B800808CD4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AC91D45929B250B800808CD4 /* Kingfisher */; };
 		AC92060E2971971400C9060B /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC92060D2971971400C9060B /* MenuCollectionViewCell.swift */; };
 		AC92ED1B2972FEAA004B1920 /* RecipeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC92ED1A2972FEAA004B1920 /* RecipeManager.swift */; };
 		AC92ED1D29730D85004B1920 /* RecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC92ED1C29730D85004B1920 /* RecipeTableViewController.swift */; };
@@ -59,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC91D45A29B250B800808CD4 /* Kingfisher in Frameworks */,
 				ACDC860A29774BA8002A6C8C /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,6 +162,7 @@
 			name = "Food Fate";
 			packageProductDependencies = (
 				ACDC860929774BA8002A6C8C /* IQKeyboardManagerSwift */,
+				AC91D45929B250B800808CD4 /* Kingfisher */,
 			);
 			productName = "Food Fate";
 			productReference = AC4EF422297073DB0010E8A5 /* Food Fate.app */;
@@ -191,6 +194,7 @@
 			mainGroup = AC4EF419297073DB0010E8A5;
 			packageReferences = (
 				ACDC860829774BA8002A6C8C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				AC91D45829B250B800808CD4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = AC4EF423297073DB0010E8A5 /* Products */;
 			projectDirPath = "";
@@ -456,6 +460,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AC91D45829B250B800808CD4 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		ACDC860829774BA8002A6C8C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
@@ -467,6 +479,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AC91D45929B250B800808CD4 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC91D45829B250B800808CD4 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		ACDC860929774BA8002A6C8C /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = ACDC860829774BA8002A6C8C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
