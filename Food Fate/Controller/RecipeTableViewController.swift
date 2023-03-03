@@ -17,7 +17,7 @@ class RecipeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "RecipeTableViewCell", bundle: nil), forCellReuseIdentifier: RecipeTableViewCell.identifier)
-
+        
         if let type {
             let service = RecipeService()
             service.loadRecipe(type: type) { result in
@@ -43,4 +43,5 @@ class RecipeTableViewController: UITableViewController {
         cell.update(recipes)
         return cell
     }
+    
 }
