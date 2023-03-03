@@ -16,5 +16,6 @@ class RecipeTableViewCell: UITableViewCell {
 
     func update(_ recipe: Recipe){
         self.recipeLabel.text = recipe.title
+        self.recipeLabel.lineBreakMode = .byWordWrapping
     }
 }
